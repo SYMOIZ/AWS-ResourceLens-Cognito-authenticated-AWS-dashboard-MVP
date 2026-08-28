@@ -1,0 +1,23 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Register for meetups
+    url: https://ocgroups.dev/cncf/group/cn-khi
+    about: >
+      You do not need this repository to attend. Register on the group page and
+      turn up.
+  - name: Ask a question in chat
+    url: https://chat.whatsapp.com/EI1MMr0gbtM5t3h5yYErIH
+    about: WhatsApp community group. Open to everyone, member or not.
+  - name: CNCF Slack, #cloud-native-karachi
+    url: https://cloud-native.slack.com/archives/C0BBA6WG76U
+    about: >
+      For technical threads and reaching organizers. Needs a CNCF Slack account
+      first, from https://slack.cncf.io/
+  - name: Report a Code of Conduct concern
+    url: https://github.com/cloud-native-karachi/community/blob/main/CODE_OF_CONDUCT.md
+    about: >
+      Do not open a public issue. This page lists the local and CNCF reporting
+      paths, including anonymous options.
+  - name: Website issues
+    url: https://github.com/cloud-native-karachi/cloud-native-karachi.github.io/issues
+    about: Broken links, typos or bugs on the website belong in that repository.

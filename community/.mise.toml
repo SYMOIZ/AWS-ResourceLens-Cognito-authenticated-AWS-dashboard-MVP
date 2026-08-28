@@ -1,0 +1,31 @@
+[tools]
+python = "3.12"
+uv = "latest"
+
+[tasks.validate]
+description = "Validate the member register"
+run = "uv run scripts/validate_members.py"
+
+[tasks.labels]
+description = "Show the issue label changes in .github/labels.yml; add -- --apply to make them"
+run = "uv run scripts/sync_labels.py"
+
+[tasks.templates]
+description = "Check that every issue template, workflow and label file parses as YAML"
+run = """
+uv run --quiet --with PyYAML python -c '
+import pathlib, sys, yaml
+bad = False
+for root in (".github", ".github/ISSUE_TEMPLATE", ".github/workflows"):
+    for p in sorted(pathlib.Path(root).glob("*.y*ml")):
+        try:
+            yaml.safe_load(p.read_text()); print(f"ok   {p}")
+        except yaml.YAMLError as e:
+            print(f"FAIL {p}: {e}"); bad = True
+sys.exit(1 if bad else 0)
+'
+"""
+
+[tasks.check]
+description = "The full gate CI applies"
+depends = ["validate", "templates"]

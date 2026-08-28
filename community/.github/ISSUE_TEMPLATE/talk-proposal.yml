@@ -1,0 +1,100 @@
+name: Talk proposal
+description: Propose a talk, lightning talk or workshop
+title: "TALK: <your title>"
+labels: ["talk-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A talk is worth 2 [contribution units](https://github.com/cloud-native-karachi/community/blob/main/governance/membership.md#contribution-units), and we are shorter of speakers than of slots.
+
+        Read [events/speaking.md](https://github.com/cloud-native-karachi/community/blob/main/events/speaking.md), particularly vendor neutrality. The test: **would this talk still be useful to someone who will never buy what you sell?**
+
+        Unsure? Propose a lightning talk.
+
+  - type: input
+    id: title
+    attributes:
+      label: Talk title
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options:
+        - Lightning talk (10 min, no questions)
+        - Talk (25-30 min plus 5 for questions)
+        - Workshop or hands-on lab (60-90 min)
+        - Panel or discussion (40 min)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sig
+    attributes:
+      label: Closest SIG
+      description: Best guess is fine, reviewers will route it.
+      options:
+        - sig-platform
+        - sig-observability
+        - sig-security
+        - None of these / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Abstract
+      description: Two or three paragraphs, written for the audience. This goes on the event page if accepted.
+    validations:
+      required: true
+
+  - type: textarea
+    id: takeaways
+    attributes:
+      label: What the audience can do afterwards that they could not before
+      description: Two or three concrete things. This is the question that most improves a talk.
+    validations:
+      required: true
+
+  - type: textarea
+    id: bio
+    attributes:
+      label: Short speaker bio
+      description: Two or three sentences, third person, as it would appear on the event page.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: neutrality
+    attributes:
+      label: Vendor neutrality
+      options:
+        - label: Not a product pitch, and the value does not depend on the audience buying or evaluating anything
+          required: true
+        - label: Any demo runs against a throwaway environment, with no live credentials, client data or confidential detail
+          required: true
+        - label: If my employer builds a tool I mention, I will say so from the front
+          required: true
+
+  - type: checkboxes
+    id: first_time
+    attributes:
+      label: Support
+      description: Ticking the first box helps rather than hurts.
+      options:
+        - label: This is my first talk, and I would like a dry run beforehand
+          required: false
+        - label: I need AV beyond a projector, described below
+          required: false
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Anything you need
+      description: Optional. AV, wifi for a workshop, dates you cannot do, help cutting the scope.
+    validations:
+      required: false

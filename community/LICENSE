@@ -1,0 +1,23 @@
+Documentation in this repository is licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+  Summary:    https://creativecommons.org/licenses/by/4.0/
+  Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+You may share and adapt it for any purpose, including commercially, provided you
+credit Cloud Native Karachi, link to the license, and indicate any changes.
+
+Scripts, including everything under scripts/, are licensed under the Apache
+License, Version 2.0. https://www.apache.org/licenses/LICENSE-2.0
+
+Copyright the Cloud Native Karachi contributors.
+
+Another Cloud Native Community Group is welcome to reuse this governance
+structure. A note telling us what you changed is more useful to us than the
+credit, because we would like to know which parts did not survive contact with a
+different community.
+
+Cloud Native Karachi is a CNCF Community Group. Kubernetes, CNCF and CNCF
+project names are trademarks of The Linux Foundation and their respective
+owners. This repository is community-maintained and is not an official
+publication of the CNCF or The Linux Foundation.

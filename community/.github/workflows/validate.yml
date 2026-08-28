@@ -1,0 +1,58 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Least privilege: this workflow only reads the checkout. It never needs to write
+# to the repository, comment on pull requests or touch a cloud provider.
+permissions:
+  contents: read
+
+jobs:
+  register:
+    name: member register
+    runs-on: ubuntu-latest
+    steps:
+      # Action versions are floating major tags rather than commit SHAs. Pinning
+      # to a SHA is the hardening step and it is worth doing; it is left out here
+      # rather than filled in with an unverified digest.
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Validate the register
+        run: uv run scripts/validate_members.py
+
+  templates:
+    name: issue templates parse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # A malformed issue form fails silently on GitHub: the template just stops
+      # appearing in the chooser, with no error anywhere. Catching it here is
+      # cheaper than someone reporting that they cannot find the membership form.
+      - name: Parse every workflow, issue template and label file
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          import sys
+
+          import yaml
+
+          failed = False
+          roots = [".github", ".github/ISSUE_TEMPLATE", ".github/workflows"]
+          for root in roots:
+              for path in sorted(pathlib.Path(root).glob("*.y*ml")):
+                  try:
+                      yaml.safe_load(path.read_text())
+                      print(f"ok   {path}")
+                  except yaml.YAMLError as exc:
+                      print(f"FAIL {path}: {exc}")
+                      failed = True
+          sys.exit(1 if failed else 0)
+          PY

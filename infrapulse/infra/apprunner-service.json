@@ -1,0 +1,55 @@
+{
+  "ServiceName": "infrapulse-backend",
+  "SourceConfiguration": {
+    "AuthenticationConfiguration": {
+      "AccessRoleArn": "arn:aws:iam::ACCOUNT_ID:role/infrapulse-apprunner-ecr-access"
+    },
+    "AutoDeploymentsEnabled": false,
+    "ImageRepository": {
+      "ImageIdentifier": "ACCOUNT_ID.dkr.ecr.AWS_REGION.amazonaws.com/infrapulse-backend:latest",
+      "ImageRepositoryType": "ECR",
+      "ImageConfiguration": {
+        "Port": "8000",
+        "RuntimeEnvironmentVariables": {
+          "APP_ENV": "production",
+          "DEMO_MODE": "true",
+          "AI_PROVIDER": "demo",
+          "DATABASE_URL": "sqlite:////app/data/infrapulse.db",
+          "AWS_REGION": "us-east-1",
+          "BEDROCK_MODEL_ID": "",
+          "SCHEDULER_ENABLED": "true",
+          "SCHEDULE_TIME": "09:00",
+          "TIMEZONE": "UTC",
+          "CORS_ORIGINS": "https://BRANCH.AMPLIFY_APP_ID.amplifyapp.com",
+          "LOG_LEVEL": "INFO"
+        }
+      }
+    }
+  },
+  "InstanceConfiguration": {
+    "Cpu": "0.25 vCPU",
+    "Memory": "0.5 GB",
+    "InstanceRoleArn": "arn:aws:iam::ACCOUNT_ID:role/infrapulse-apprunner-instance"
+  },
+  "HealthCheckConfiguration": {
+    "Protocol": "HTTP",
+    "Path": "/api/health",
+    "Interval": 10,
+    "Timeout": 5,
+    "HealthyThreshold": 1,
+    "UnhealthyThreshold": 5
+  },
+  "AutoScalingConfigurationArn": "arn:aws:apprunner:AWS_REGION:ACCOUNT_ID:autoscalingconfiguration/infrapulse-min/1/REVISION_ID",
+  "NetworkConfiguration": {
+    "IngressConfiguration": {
+      "IsPubliclyAccessible": true
+    },
+    "IpAddressType": "IPV4"
+  },
+  "Tags": [
+    {
+      "Key": "Project",
+      "Value": "InfraPulse"
+    }
+  ]
+}

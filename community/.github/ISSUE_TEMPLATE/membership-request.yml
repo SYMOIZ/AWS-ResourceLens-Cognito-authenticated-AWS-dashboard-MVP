@@ -1,0 +1,120 @@
+name: Membership request
+description: Apply to become a Cloud Native Karachi Member
+title: "REQUEST: Membership for <your GitHub handle>"
+labels: ["membership"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [governance/membership.md](https://github.com/cloud-native-karachi/community/blob/main/governance/membership.md) first.
+
+        While [members.yaml](https://github.com/cloud-native-karachi/community/blob/main/members/members.yaml) reads `phase: founding`, thresholds are lower than steady state: **2 contribution units, 1 event attended (0 if fewer than 2 have been held), 1 sponsor who is an organizer.** Check that file before you fill this in.
+
+        Short of the bar gets a specific answer about what is missing, not a rejection. Only your handle, sponsors, join date and a link to this issue reach the register.
+
+  - type: input
+    id: github
+    attributes:
+      label: Your GitHub handle
+      description: Bare handle, no URL, no @.
+      placeholder: adalovelace
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Name to be listed under
+      description: Optional. Blank means a handle-only listing, which is fully supported.
+    validations:
+      required: false
+
+  - type: input
+    id: org
+    attributes:
+      label: Employer
+      description: Optional and self-declared.
+    validations:
+      required: false
+
+  - type: input
+    id: slack
+    attributes:
+      label: Your CNCF Slack display name
+      description: To verify you are in #cloud-native-karachi. Checked once, never committed.
+    validations:
+      required: true
+
+  - type: input
+    id: whatsapp
+    attributes:
+      label: Your name in the WhatsApp community group
+      description: To find you in the participant list. No phone numbers. Checked once, never committed.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: baseline
+    attributes:
+      label: Baseline requirements
+      description: All required. The last one is on your honour; we cannot check it.
+      options:
+        - label: I am registered on the [group page](https://ocgroups.dev/cncf/group/cn-khi)
+          required: true
+        - label: I am in CNCF Slack and in `#cloud-native-karachi`
+          required: true
+        - label: I am in the [WhatsApp community group](https://chat.whatsapp.com/EI1MMr0gbtM5t3h5yYErIH)
+          required: true
+        - label: I follow the group on LinkedIn, Instagram and Facebook, and will share announcements
+          required: true
+        - label: I agree to the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md)
+          required: true
+
+  - type: textarea
+    id: units
+    attributes:
+      label: Contribution units
+      description: One per line, with the unit value and a link a reviewer can open.
+      placeholder: |
+        2 units - Lightning talk "Cosign in 10 minutes", September meetup - https://ocgroups.dev/... - slides: https://...
+        1 unit - Ran the check-in desk, same meetup - retro https://github.com/cloud-native-karachi/community/issues/34
+        1 unit - Merged PR fixing website footer links - https://github.com/cloud-native-karachi/cloud-native-karachi.github.io/pull/12
+    validations:
+      required: true
+
+  - type: textarea
+    id: attendance
+    attributes:
+      label: Events attended
+      description: Which events you checked in at, last 12 months. "None held yet" is a valid answer.
+    validations:
+      required: true
+
+  - type: input
+    id: sponsors
+    attributes:
+      label: Sponsors
+      description: >
+        GitHub handles, comma separated. One organizer during the founding phase,
+        otherwise two current Members or organizers. Ask each to comment
+        confirming what they vouch for. No self-sponsorship.
+      placeholder: amaanx86
+    validations:
+      required: true
+
+  - type: input
+    id: sigs
+    attributes:
+      label: SIGs you want to join
+      description: Optional.
+      placeholder: sig-platform
+    validations:
+      required: false
+
+  - type: textarea
+    id: anything_else
+    attributes:
+      label: Anything else
+      description: Optional. What you want to work on.
+    validations:
+      required: false

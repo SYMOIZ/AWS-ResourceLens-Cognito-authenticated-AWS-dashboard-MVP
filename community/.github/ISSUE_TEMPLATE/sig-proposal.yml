@@ -1,0 +1,90 @@
+name: SIG proposal
+description: Propose a new Special Interest Group
+title: "SIG: sig-<topic>"
+labels: ["sig-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [governance/sigs.md](https://github.com/cloud-native-karachi/community/blob/main/governance/sigs.md), including [the SIGs we deliberately did not start](https://github.com/cloud-native-karachi/community/blob/main/governance/sigs.md#the-sigs-we-deliberately-did-not-start). Proposing one of those is fine and needs no argument past that section; it only needs someone to lead it.
+
+        Majority of organizers after a 7-day comment period. A SIG stays **proposed** until it has a lead and a dated first activity.
+
+  - type: input
+    id: name
+    attributes:
+      label: Proposed name
+      placeholder: sig-resilience
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Two or three sentences. "Cloud native" overlaps everything and will be sent back.
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Explicitly out of scope
+      description: Name the neighbouring SIGs and where the boundary sits.
+    validations:
+      required: true
+
+  - type: textarea
+    id: not_covered
+    attributes:
+      label: Why an existing SIG does not cover this
+      description: Overlap is the most common reason a proposal is sent back.
+    validations:
+      required: true
+
+  - type: input
+    id: lead
+    attributes:
+      label: Proposed lead
+      description: >
+        A GitHub handle, or "looking for one", which keeps it proposed. Needs a
+        Member of 3 months (waived in the founding phase) with 2 delivered
+        activities in the topic area.
+    validations:
+      required: true
+
+  - type: input
+    id: first_activity
+    attributes:
+      label: First activity, and roughly when
+      description: '"A Kyverno workshop, October 2026" is enough. "Regular meetups" is not.'
+    validations:
+      required: true
+
+  - type: textarea
+    id: topics
+    attributes:
+      label: Three topics for the first year
+      description: This tests whether there is a year of material in the idea.
+    validations:
+      required: true
+
+  - type: input
+    id: supporters
+    attributes:
+      label: Two people beyond the lead who will show up and help
+      description: GitHub handles. Ask them to comment confirming. A SIG of one goes dormant in a quarter.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: commitments
+    attributes:
+      label: Commitments
+      options:
+        - label: The lead commits to one activity per quarter, and knows the SIG goes dormant after two quarters without one
+          required: true
+        - label: The lead is not already leading another SIG
+          required: true
+        - label: Content will meet the CNCF vendor-neutral standard
+          required: true

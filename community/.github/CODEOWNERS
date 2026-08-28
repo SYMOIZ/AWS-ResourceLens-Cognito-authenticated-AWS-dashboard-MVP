@@ -1,0 +1,22 @@
+# Review requirements. Enable "Require review from Code Owners" in branch
+# protection on `main`, or these lines request reviewers without enforcing.
+#
+# Teams must exist in the cloud-native-karachi organization:
+#   organizers   Admin
+#   members      Triage
+#   sig-*        Write, scoped to that SIG's directory
+
+* @cloud-native-karachi/organizers
+
+# Anyone may open a pull request against these; merging needs an organizer.
+/members/           @cloud-native-karachi/organizers
+/governance/        @cloud-native-karachi/organizers
+/events/            @cloud-native-karachi/organizers
+/CODE_OF_CONDUCT.md @cloud-native-karachi/organizers
+/.github/           @cloud-native-karachi/organizers
+
+# Uncomment a line when that SIG goes active, so its leads own their charter and
+# nothing else.
+# /sigs/sig-platform/       @cloud-native-karachi/sig-platform
+# /sigs/sig-observability/  @cloud-native-karachi/sig-observability
+# /sigs/sig-security/       @cloud-native-karachi/sig-security

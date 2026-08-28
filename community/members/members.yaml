@@ -1,0 +1,70 @@
+# Cloud Native Karachi members. See ../governance/membership.md before editing.
+# Entries are added by pull request after a membership request has been reviewed.
+#
+# Never add a phone number, email address, Slack handle or WhatsApp name. Those
+# are verification details and they stay in the request issue.
+#
+# `name`, `linkedin` and `org` are optional. A handle-only listing is fully
+# supported.
+
+# Membership phase. See ../governance/membership.md#founding-phase.
+# Flip to `steady` when events_held reaches 3 AND there are 10 members.
+phase: founding
+
+# Total events held, all time. Bumped by the pull request closing each retro.
+events_held: 0
+
+# Schema reference. Copy it, do not edit it.
+#
+# members:
+#   - name: ABC BIN XYZ
+#     github: abcbinxyz
+#     linkedin: https://www.linkedin.com/in/abcbinxyz
+#     org: Example Ltd
+#     sigs: [sig-platform]
+#     sponsors: [amaanx86]
+#     since: 2026-09-15
+#     request: https://github.com/cloud-native-karachi/community/issues/12
+#     founding: true
+
+members:
+  - name: Nimra Shah
+    github: nimrashah009
+    linkedin: www.linkedin.com/in/nimrashahsocialmediamanager
+    org: Social Nudge
+    sigs: []
+    sponsors: [amaanx86,ameerhamza-io]
+    since: 2026-07-28
+    request: https://github.com/cloud-native-karachi/community/issues/10
+    founding: true
+    
+  - name: Saba Ramzan
+    github: sabaramzan123
+    linkedin: https://www.linkedin.com/in/saba-ramzan-94b7742b8/
+    org: Salim Habib University
+    sigs: []
+    sponsors: [amaanx86]
+    since: 2026-08-11
+    request: https://github.com/cloud-native-karachi/community/issues/4
+    founding: true
+
+  - name: Ahmed Mateen
+    github: 804ahmedkhan07-oss
+    linkedin: https://www.linkedin.com/in/ahmed-mateen-khan-7148613a4
+    org: Mise academy 
+    sigs: []
+    sponsors: [amaanx86]
+    since: 2026-08-12
+    request: https://github.com/cloud-native-karachi/community/issues/6
+    founding: false
+    
+  - name: Sufiyan Khan
+    github: SufiyanKhanCloud
+    linkedin: https://www.linkedin.com/in/sufiyan-khan-cloud
+    org: Teknoloje Solutions
+    sigs: []
+    sponsors: [amaanx86]
+    since: 2026-08-11
+    request: https://github.com/cloud-native-karachi/community/issues/7
+    founding: false
+    

@@ -1,0 +1,43 @@
+# Cloud Native Karachi organizers. See ../governance/organizers.md before editing.
+#
+# Everyone here must also appear on the CNCF group page,
+# https://ocgroups.dev/cncf/group/cn-khi. The CNCF appoints on our nomination.
+# The three below are the founding organizers named in the chapter request,
+# https://github.com/cncf/communitygroups/issues/761, formed 2026-07-22.
+#
+# `openprofile` and `community_profile` are public profile pages the CNCF
+# organizer request asks for by URL. The email and CNCF Slack name on that same
+# form are verification details: they stay in the request and never come here.
+#
+# Never add a phone number, email address, Slack handle or WhatsApp name.
+
+organizers:
+  - name: Amaan Ul Haq Siddiqui
+    github: amaanx86
+    linkedin: https://www.linkedin.com/in/amaanulhaqsiddiqui
+    openprofile: https://openprofile.dev/profile/amaanulhaq
+    community_profile: https://community2.cncf.io/u/m2mrtg
+    org: SUDO Consultants
+    since: 2026-07-22
+    founding: true
+    sigs: []
+
+  - name: Ameer Hamza
+    github: ameerhamza-io
+    linkedin: https://www.linkedin.com/in/ameer-hamza01
+    openprofile: https://openprofile.dev/profile/ameerhamza3463
+    community_profile: https://community2.cncf.io/u/mvzn8z
+    org: SUDO Consultants
+    since: 2026-07-22
+    founding: true
+    sigs: []
+
+  - name: Muhammad Naimatullah Khan
+    github: Cyber-Naimo
+    linkedin: https://www.linkedin.com/in/muhammad-naimatullah-khan
+    openprofile: https://openprofile.dev/profile/naimss
+    community_profile: https://community2.cncf.io/u/mg6xxd
+    org: Veeam Software
+    since: 2026-07-22
+    founding: true
+    sigs: []

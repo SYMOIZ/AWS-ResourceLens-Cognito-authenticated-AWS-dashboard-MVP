@@ -1,0 +1,69 @@
+# Cloud Native Karachi issue labels. This file is the whole set; see
+# ../CONTRIBUTING.md#labels.
+#
+#     mise run labels              show what would change on the repository
+#     mise run labels -- --apply   make the change
+#
+# The four `applied by the issue form` labels come from ISSUE_TEMPLATE/ without
+# anyone touching them. The rest are put on by hand.
+#
+# Keep this list short. A label nobody filters on makes every other label harder
+# to see, and a label that has to be explained is not doing the sorting work.
+#
+# GitHub's organization-level default labels only reach repositories created
+# after those defaults are set, so an existing repository gets its labels from
+# this file rather than from the organization.
+
+labels:
+  - name: membership
+    color: 0e8a16
+    description: Membership request. Applied by the issue form.
+
+  - name: organizer-nomination
+    color: 006b75
+    description: Organizer nomination. Applied by the issue form.
+
+  - name: talk-proposal
+    color: 5319e7
+    description: Talk, lightning talk or workshop. Applied by the issue form.
+
+  - name: sig-proposal
+    color: 1d76db
+    description: New SIG, or a lifecycle change to one. Applied by the issue form.
+
+  - name: register-update
+    color: c2e0c6
+    description: Corrects an existing entry in members/. A changed handle is urgent; see members/README.md#changing-your-own-entry.
+
+  - name: event
+    color: fbca04
+    description: Meetup planning issue or retro. Retros are the evidence source for contribution units.
+
+  - name: governance
+    color: b60205
+    description: Changes a rule under governance/. Two thirds of organizers, 7-day comment period.
+
+  - name: organizers-meeting
+    color: c5def5
+    description: Monthly organizer meeting notes.
+
+  - name: needs-info
+    color: d876e3
+    description: Waiting on the person who opened it. Never a rejection; the comment says what is missing.
+
+  - name: good first issue
+    color: 7057ff
+    description: Small and self-contained. GitHub reads this exact name for the Contribute tab.
+
+# GitHub creates these with every new repository. None of them fits a governance
+# and register repository, and leaving them in place defeats the point of a short
+# list. `good first issue` is a GitHub default we keep, so it is not here.
+delete:
+  - bug
+  - documentation
+  - duplicate
+  - enhancement
+  - help wanted
+  - invalid
+  - question
+  - wontfix

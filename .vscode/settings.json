@@ -1,0 +1,21 @@
+{
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "terminal.external.windowsExec": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "terminal.integrated.automationProfile.windows": {
+    "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "args": ["-NoLogo", "-NoProfile"]
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Git Bash": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": ["-NoLogo", "-NoProfile"],
+      "icon": "terminal-powershell",
+      "overrideName": true
+    }
+  }
+}

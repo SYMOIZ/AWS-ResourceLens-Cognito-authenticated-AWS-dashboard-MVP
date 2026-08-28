@@ -1,0 +1,121 @@
+name: Organizer nomination
+description: For current organizers only. Nominate someone to become an organizer.
+title: "NOMINATION: Organizer - <candidate>"
+labels: ["organizer-nomination"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Only a current organizer opens this.** Self-nomination is not accepted. Ask an organizer directly; they owe you a straight answer and the specific gap. See [governance/organizers.md](https://github.com/cloud-native-karachi/community/blob/main/governance/organizers.md).
+
+        **Check eligibility 5, 6 and 7 first.** They are CNCF requirements. In particular the candidate's employer must differ from every current organizer's, so read the `org` field on each entry in [organizers.yaml](https://github.com/cloud-native-karachi/community/blob/main/members/organizers.yaml) before opening this.
+
+        Do not paste the candidate's contact details here. They provide those on the CNCF form at step 4.
+
+  - type: input
+    id: candidate
+    attributes:
+      label: Candidate GitHub handle
+    validations:
+      required: true
+
+  - type: input
+    id: nominator
+    attributes:
+      label: Nominating organizer
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: cncf
+    attributes:
+      label: CNCF eligibility, checked before opening this
+      options:
+        - label: Lives in or near Karachi
+          required: true
+        - label: Their employer differs from every current organizer's
+          required: true
+        - label: Has completed LFC102 and holds the Credly badge
+          required: true
+
+  - type: input
+    id: employer
+    attributes:
+      label: Candidate employer, against the current roster
+      placeholder: "Systems Ltd - no employer in organizers.yaml matches"
+    validations:
+      required: true
+
+  - type: input
+    id: lfc102
+    attributes:
+      label: LFC102 Credly badge link
+    validations:
+      required: true
+
+  - type: input
+    id: member_since
+    attributes:
+      label: Member since
+      description: At least 6 months ago, unless the founding phase waiver applies.
+      placeholder: "2026-09-15"
+    validations:
+      required: true
+
+  - type: textarea
+    id: events_owned
+    attributes:
+      label: The two events they owned end to end
+      description: >
+        Owner means named as owner in the planning issue and retro. A speaker is
+        not an owner. Link both planning issues and both retros.
+    validations:
+      required: true
+
+  - type: textarea
+    id: judgement
+    attributes:
+      label: Eligibility 3, the difficult situation
+      description: >
+        The specific instance where they showed judgement under pressure: a
+        speaker cancelling, a venue falling through, a tense thread.
+    validations:
+      required: true
+
+  - type: textarea
+    id: case
+    attributes:
+      label: Why this person, and why now
+      description: >
+        Including what they will own that nobody owns today. This text is the
+        source for the "why you want to be added" field on the CNCF form.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: commitments
+    attributes:
+      label: The candidate has confirmed they understand
+      options:
+        - label: Roughly 4 to 8 hours a month, more before an event
+          required: true
+        - label: They will own an event in their first quarter
+          required: true
+        - label: The CNCF vendor-neutral content standard
+          required: true
+        - label: The group holds an event at least every 90 days
+          required: true
+        - label: They will handle Code of Conduct reports, including unpopular decisions
+          required: true
+        - label: The CNCF decides, and they are not an organizer until added to the group page
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Next
+
+        1. **7-day comment period**, open to all Members. Concerns can go to any organizer privately.
+        2. **The vote.** Unanimous among non-recused organizers at 5 or fewer. A block needs a written reason and is overridable by two thirds at the next organizers meeting, at least 14 days later.
+        3. **The CNCF request** on [cncf/communitygroups](https://github.com/cncf/communitygroups/issues/new/choose). Link it back here.
+        4. **Onboarding** within 7 days of CNCF confirmation.
